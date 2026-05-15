@@ -2,16 +2,16 @@ configuration:
   Screen_Size:
     name: Sélectionnez la taille de l'écran
     description: >-
-      Sélectionnez la taille de l'écran de l'affichage OLED. 32x128 ou 64x128
+      Sélectionnez la taille de l'écran de l'affichage OLED. 32x128 ou 64x128.
   Show_Static_Screen:
     name: Afficher l'écran personnalisé
     description: >-
       Affiche l'écran statique avec le texte personnalisé spécifié
   Show_Welcome_Screen:
-    name: Show Welcome Screen
+    name: Afficher l'écran de bienvenue
     description: >-
-      When on, shows an animated 'Welcome to `hostname`' screen
-  Show_Splash_Screen:
+      Si activé, affiche un écran animé 'Bienvenue à `hostname`'.
+  Show_Version_Screen:
     name: Afficher l'écran de démarrage de Home Assistant
     description: >-
       Si activé, affiche la version actuelle de Home Assistant OS et du noyau.
@@ -27,28 +27,28 @@ configuration:
   Show_Memory_Screen:
     name: Afficher l'écran d'informations mémoire
     description: >-
-      Si activé, affiche les statistiques mémoire, comme la quantité utilisée, totale et l'utilisation
+      Si activé, affiche les statistiques mémoire, comme la quantité utilisée, totale et l'utilisation.
   Show_Storage_Screen:
     name: Afficher l'écran d'informations stockage
     description: >-
-      Si activé, affiche les statistiques de stockage, comme la quantité utilisée, totale et l'utilisation
+      Si activé, affiche les statistiques de stockage, comme la quantité utilisée, totale et l'utilisation.
   Show_Stats_Screen:
-    name: Show Stats Information Screen
+    name: Afficher l'écran des statistiques
     description: >-
-      When on, shows all system stats
+      Si activé, affiche toutes les statistiques du système
   icon_stats:
     name: Stats Type
     description: >-
       Show only text or icons on stats screen.
 
   Welcome_Screen_Text:
-    name: Welcome Screen Text
+    name: Texte de l'écran de bienvenue
     description: >-
-      Text to display when the Show_Welcome_Screen is enabled. Accepts all static text variables.	
+      Texte à afficher lorsque l'option Show_Welcome_Screen est activée. Accepte toutes les variables de texte statique.
   Static_Screen_Text:
-    name: Custom Screen Text
+    name: Texte de l'écran personnalisé
     description: >-
-      Text to display when the Show_Static_Screen is enabled. Accepts all static text variables.
+      Texte à afficher lorsque l'option Show_Static_Screen est activée. Accepte toutes les variables de texte statique.
   Graceful_Exit_Text:
     name: Texte d'arrêt du service
     description: >-
@@ -58,7 +58,7 @@ configuration:
     name: Durée par défaut
     description: >-
       Cette option permet de définir la durée par défaut en secondes d'affichage de chaque écran.
-      Cette option est ignorée pour les écrans ayant une durée spécifique
+      Cette option est ignorée pour les écrans ayant une durée spécifique.
   Scroll_Amplitude:
     name: Amplitude de hauteur de défilement
     description: >-
@@ -70,31 +70,31 @@ configuration:
   Static_Screen_Text_NoScroll:
     name: Empêcher le défilement de l'écran personnalisé
     description: >-
-      Désactive l'animation de défilement si le texte statique est trop grand pour tenir. Si activé, fait un effort pour empiler le texte en lignes centrées	
+      Désactive l'animation de défilement si le texte statique est trop grand pour tenir. Si activé, fait un effort pour empiler le texte en lignes centrées.
   Temperature_Unit:
     name: Unité de température
     description: >-
-      Affiche la température CPU en C (Celsius) ou F (Fahrenheit)
+      Affiche la température CPU en C (Celsius) ou F (Fahrenheit).
   Rotate:
     name: Rotation de l'écran
     description: >-
-      Nombre de degrés pour faire pivoter l'écran dans le sens antihoraire à partir du centre
+      Nombre de degrés pour faire pivoter l'écran dans le sens antihoraire à partir du centre.
   
   Welcome_Screen_Duration:
     name: Durée de l'écran de bienvenue
     description: >-
-      Durée d'affichage de l'écran de bienvenue en secondes
+      Durée d'affichage de l'écran de bienvenue en secondes.
   Welcome_Screen_Limit:
     name: Limite d'affichage de l'écran de bienvenue
     description: >-
       Nombre de fois que l'écran de bienvenue peut apparaître.
-      Par exemple, si défini sur 2, l'écran de bienvenue n'apparaîtra que 2 fois
+      Par exemple, si défini sur 2, l'écran de bienvenue n'apparaîtra que 2 fois.
 
-  Splash_Screen_Duration:
+  Version_Screen_Duration:
     name: Durée de l'écran de démarrage de Home Assistant
     description: >-
-      Durée d'affichage de l'écran de démarrage de Home Assistant en secondes
-  Splash_Screen_Limit:
+      Durée d'affichage de l'écran de démarrage de Home Assistant en secondes.
+  Version_Screen_Limit:
     name: Limite d'affichage de l'écran de démarrage de Home Assistant
     description: >-
       Nombre de fois que l'écran de démarrage de Home Assistant peut apparaître.
@@ -102,7 +102,7 @@ configuration:
     Network_Screen_Duration:
       name: Durée de l'écran réseau
       description: >-
-        Durée d'affichage de l'écran réseau en secondes
+        Durée d'affichage de l'écran réseau en secondes.
     Network_Screen_Limit:
       name: Limite d'affichage de l'écran réseau
       description: >-
@@ -111,7 +111,7 @@ configuration:
     CPU_Screen_Duration:
       name: Durée de l'écran CPU
       description: >-
-        Durée d'affichage de l'écran CPU en secondes
+        Durée d'affichage de l'écran CPU en secondes.
     CPU_Screen_Limit:
       name: Limite d'affichage de l'écran CPU
       description: >-
@@ -120,7 +120,7 @@ configuration:
     Memory_Screen_Duration:
       name: Durée de l'écran mémoire
       description: >-
-        Durée d'affichage de l'écran mémoire en secondes
+        Durée d'affichage de l'écran mémoire en secondes.
     Memory_Screen_Limit:
       name: Limite d'affichage de l'écran mémoire
       description: >-
@@ -129,7 +129,7 @@ configuration:
     Storage_Screen_Duration:
       name: Durée de l'écran stockage
       description: >-
-        Durée d'affichage de l'écran stockage en secondes
+        Durée d'affichage de l'écran stockage en secondes.
     Storage_Screen_Limit:
       name: Limite d'affichage de l'écran stockage
       description: >-
@@ -138,7 +138,7 @@ configuration:
   Stats_Screen_duration:
     name: Durée de l'écran des statistiques
     description: >-
-      Durée d'affichage de l'écran des statistiques en secondes
+      Durée d'affichage de l'écran des statistiques en secondes.
   Stats_Screen_Limit:
     name: Limite d'affichage de l'écran des statistiques
     description: >-
@@ -156,9 +156,9 @@ configuration:
     Screenshot:
       name: Chemin de capture d'écran
       description: >-
-        Capture une capture d'écran de chaque écran dans /media/[screen_name].png
+        Capture une capture d'écran de chaque écran dans /media/[screen_name].png.
         Pour vérifier la capture des images, activez le mode débogage.
-    Supervisor_token:
+    Supervizor_token:
       name: Jeton du superviseur
       description: >-
         Jeton permettant à l'addon de communiquer avec l'API Supervisor.

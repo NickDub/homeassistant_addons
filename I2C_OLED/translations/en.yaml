@@ -11,8 +11,8 @@ configuration:
     name: Show Welcome Screen
     description: >-
       When on, shows an animated 'Welcome to `hostname`' screen
-  Show_Splash_Screen:
-    name: Show Home Assistant Splash Screen
+  Show_Version_Screen:
+    name: Show Home Assistant Version Screen
     description: >-
       When on, shows the current version of Home Assistant OS and core.
       An asterisk will be presented if either require an upgrade.
@@ -90,14 +90,14 @@ configuration:
       Numer of times to allow the Welcome Screen to appear.
       e.g. if set to 2, the Welcome Screen will only appear 2 times
 
-  Splash_Screen_Duration:
-    name: Home Assistant Splash Screen Duration
+  Version_Screen_Duration:
+    name: Home Assistant Version Screen Duration
     description: >-
-      How long in seconds to show the Home Assistant Splash Screen
-  Splash_Screen_Limit:
-    name: Home Assistant Splash Screen Max Limit
+      How long in seconds to show the Home Assistant Version Screen
+  Version_Screen_Limit:
+    name: Home Assistant Version Screen Max Limit
     description: >-
-      Numer of times to allow the Home Assistant Splash Screen to appear.
+      Numer of times to allow the Home Assistant Version Screen to appear.
 
   Network_Screen_Duration:
     name: Network Screen Duration
@@ -158,7 +158,7 @@ configuration:
     description: >-
       Capture a screenshot of each screen as it iterates to /media/[screen_name].png
       To see if images are captured, enable debugging.
-  Supervisor_token:
+  Supervizor_token:
     name: Supervisor Token
     description: >-
       Token to allow the addon to communicate with the Supervisor API. 

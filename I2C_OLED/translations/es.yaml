@@ -7,7 +7,7 @@ configuration:
     name: Mostrar pantalla de bienvenida
     description: >-
       Cuando activas esta opción, muestra una pantalla animada 'Bienvenido a `hostname`'.
-  Show_Splash_Screen:
+  Show_Version_Screen:
     name: Mostrar pantalla de Home Assistant
     description: >-
       Cuando activas esta opción, muestra la versión actual de Home Assistant OS y core.
@@ -82,11 +82,11 @@ configuration:
       Número de veces que aparecerá la pantalla de bienvenida.
       Por ejemplo, si estableces 2, la pantalla de bienvenida solo aparecerá 2 veces.
 
-  Splash_Screen_Duration:
+  Version_Screen_Duration:
     name: Duración de la pantalla de presentación de Home Assistant
     description: >-
       Cuánto tiempo en segundos se muestra la pantalla de presentación de Home Assistant.
-  Splash_Screen_Limit:
+  Version_Screen_Limit:
     name: Límite máximo de pantalla de presentación de Home Assistant
     description: >-
       Número de veces que aparecerá la pantalla de presentación de Home Assistant.
@@ -150,7 +150,7 @@ configuration:
     description: >-
       Realiza una captura de pantalla mientras itera por cada pantalla en /media/[nombre_pantalla].png.
       Para ver si se capturan imágenes, habilita la depuración.
-  Supervisor_token:
+  Supervizor_token:
     name: Token de Supervisor
     description: >-
      Token para permitir que el complemento se comunique con la API del Supervisor.
