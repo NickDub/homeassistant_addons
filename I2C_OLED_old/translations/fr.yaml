@@ -1,4 +1,8 @@
 configuration:
+  Screen_Size:
+    name: Sélectionnez la taille de l'écran
+    description: >-
+      Sélectionnez la taille de l'écran de l'affichage OLED. 32x128 ou 64x128.
   Show_Static_Screen:
     name: Afficher l'écran personnalisé
     description: >-
@@ -8,7 +12,7 @@ configuration:
     description: >-
       Si activé, affiche un écran animé 'Bienvenue à `hostname`'.
   Show_Version_Screen:
-    name: Afficher l'écran des versions de Home Assistant
+    name: Afficher l'écran de démarrage de Home Assistant
     description: >-
       Si activé, affiche la version actuelle de Home Assistant OS et du noyau.
       Un astérisque sera présenté si l'un ou l'autre nécessite une mise à jour.
@@ -32,6 +36,10 @@ configuration:
     name: Afficher l'écran des statistiques
     description: >-
       Si activé, affiche toutes les statistiques du système
+  icon_stats:
+    name: Stats Type
+    description: >-
+      Show only text or icons on stats screen.
 
   Welcome_Screen_Text:
     name: Texte de l'écran de bienvenue
@@ -83,13 +91,13 @@ configuration:
       Par exemple, si défini sur 2, l'écran de bienvenue n'apparaîtra que 2 fois.
 
   Version_Screen_Duration:
-    name: Durée de l'écran des versions de Home Assistant
+    name: Durée de l'écran de démarrage de Home Assistant
     description: >-
-      Durée d'affichage de l'écran des versions de Home Assistant en secondes.
+      Durée d'affichage de l'écran de démarrage de Home Assistant en secondes.
   Version_Screen_Limit:
-    name: Limite d'affichage de l'écran des versions de Home Assistant
+    name: Limite d'affichage de l'écran de démarrage de Home Assistant
     description: >-
-      Nombre de fois que l'écran des versions de Home Assistant peut apparaître.
+      Nombre de fois que l'écran de démarrage de Home Assistant peut apparaître.
 
     Network_Screen_Duration:
       name: Durée de l'écran réseau
@@ -145,7 +153,12 @@ configuration:
       description: >-
         Numéro du bus de votre périphérique I2C.
         Il s'agit généralement de 1 (/dev/i2c-1), mais parfois certains appareils utilisent 0 (/dev/i2c-0).
-    Supervisor_token:
+    Screenshot:
+      name: Chemin de capture d'écran
+      description: >-
+        Capture une capture d'écran de chaque écran dans /media/[screen_name].png.
+        Pour vérifier la capture des images, activez le mode débogage.
+    Supervizor_token:
       name: Jeton du superviseur
       description: >-
         Jeton permettant à l'addon de communiquer avec l'API Supervisor.

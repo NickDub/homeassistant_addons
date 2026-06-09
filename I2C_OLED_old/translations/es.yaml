@@ -8,7 +8,7 @@ configuration:
     description: >-
       Cuando activas esta opción, muestra una pantalla animada 'Bienvenido a `hostname`'.
   Show_Version_Screen:
-    name: Mostrar pantalla de versiones de Home Assistant
+    name: Mostrar pantalla de Home Assistant
     description: >-
       Cuando activas esta opción, muestra la versión actual de Home Assistant OS y core.
       Un asterisco indica si alguna de las dos requiere una actualización.
@@ -83,13 +83,13 @@ configuration:
       Por ejemplo, si estableces 2, la pantalla de bienvenida solo aparecerá 2 veces.
 
   Version_Screen_Duration:
-    name: Duración de la pantalla de versiones de Home Assistant
+    name: Duración de la pantalla de presentación de Home Assistant
     description: >-
-      Cuánto tiempo en segundos se muestra la pantalla de versiones de Home Assistant.
+      Cuánto tiempo en segundos se muestra la pantalla de presentación de Home Assistant.
   Version_Screen_Limit:
-    name: Límite máximo de pantalla de versiones de Home Assistant
+    name: Límite máximo de pantalla de presentación de Home Assistant
     description: >-
-      Número de veces que aparecerá la pantalla de versiones de Home Assistant.
+      Número de veces que aparecerá la pantalla de presentación de Home Assistant.
 
   Network_Screen_Duration:
     name: Duración de la pantalla de información de red
@@ -145,7 +145,12 @@ configuration:
     description: >-
       Número de bus de tu dispositivo I2C.
       Esto suele ser 1 (/dev/i2c-1), pero en ocasiones los dispositivos pueden informar esto como 0 (/dev/i2c-0).
-  Supervisor_token:
+  Screenshot:
+    name: Ruta de captura de captura de pantalla
+    description: >-
+      Realiza una captura de pantalla mientras itera por cada pantalla en /media/[nombre_pantalla].png.
+      Para ver si se capturan imágenes, habilita la depuración.
+  Supervizor_token:
     name: Token de Supervisor
     description: >-
      Token para permitir que el complemento se comunique con la API del Supervisor.

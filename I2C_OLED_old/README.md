@@ -91,6 +91,7 @@ Easiest way to install this addon is to add the repository to Home Assistant.
 | ---------------------| ------- | ------------ | -------------------------------------------------------| ------------------- |
 | I2C_bus     | int  | **Required** | The bus number of the targeted i2c device (/dev/i2c-[ number ])                  | `1`                 |
 | Debug_Mode     | bool  | **Optional** | Weather to enable debugging output in the logs                  | `false`                 |
+| Screenshot     | string  | **Optional** | Capture a screenshot of each screen. Only value currently accepted is ```/media``` Saved to /media/[screen_name].png  | `null`                 |
 | Temperature_Unit     | string  | **Required** | Display the CPU temperature in C or F                  | `C`                 |
 | Default_Duration     | int     | **Required** | How long in seconds to display each screen by default. Ignored if specified on specific screen  | `10`                |
 | DateTime_Format      | string  | **Optional** | Format of the ```{datetime}``` static text variable  | `%d/%m/%Y %H:%M:%S` |
