@@ -11,9 +11,9 @@ class Config:
     SUPPORTED_SCREENS = [
         'welcome',
         'version',
-        'network',
-        'storage',
         'memory',
+        'storage',
+        'network',
         'cpu',
         'static',
         'stats'
@@ -23,21 +23,22 @@ class Config:
     ]
     OPTION_KEYS = {
         'show': 'show_{}_screen',
-        'limit': '{}_screen_limit',
         'duration': '{}_screen_duration',
-        'temp_unit': 'temperature_unit',
-        'default_duration': 'default_duration',
-        'i2c_bus': 'i2c_bus',
-        'graceful_exit_text': 'graceful_exit_text',
+        'limit': '{}_screen_limit',
+        'welcome_screen_text': 'welcome_screen_text',
         'static_screen_text': 'static_screen_text',
         'static_screen_text_noscroll': 'static_screen_text_noscroll',
         'scroll_amplitude': 'scroll_amplitude',
+        'graceful_exit_text': 'graceful_exit_text',
+        'default_duration': 'default_duration',
+        'temp_unit': 'temperature_unit',
         'datetime_format': 'datetime_format',
-        'welcome_screen_text': 'welcome_screen_text',
+        'font': 'font',
         'rotate': 'rotate',
         'show_icons': 'show_icons',
         'show_hint': 'show_hint',
         'compact': 'compact',
+        'i2c_bus': 'i2c_bus',
         'supervisor_token': 'supervisor_token',
     }
 
@@ -114,9 +115,10 @@ class Config:
             show_icons = self.get_option_value('show_icons')
             show_hint = self.get_option_value('show_hint')
             compact = self.get_option_value('compact')
+            font = self.get_option_value('font')
 
             self.display = Display(busnum=busnum, rotate=rotate, show_icons=show_icons,
-                                   show_hint=show_hint, compact=compact)
+                                   show_hint=show_hint, compact=compact, font=font)
 
         except Exception as e:
             raise Exception("Could not create display. Check your i2c bus with 'ls /dev/i2c-*'.")

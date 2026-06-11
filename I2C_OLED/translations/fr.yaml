@@ -71,7 +71,11 @@ configuration:
     name: Rotation de l'écran
     description: >-
       Nombre de degrés pour faire pivoter l'écran dans le sens antihoraire à partir du centre.
-  
+  Font:
+    name: Police
+    description: >-
+      Police à utiliser pour le texte.
+
   Welcome_Screen_Duration:
     name: Durée de l'écran de bienvenue
     description: >-

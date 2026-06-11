@@ -71,7 +71,11 @@ configuration:
     name: Rotate Screen
     description: >-
       Number of degrees to rotate the screen counter clockwise from the centre
-  
+  Font:
+    name: Font
+    description: >-
+      Font to use for the text.
+
   Welcome_Screen_Duration:
     name: Welcome Screen Duration
     description: >-

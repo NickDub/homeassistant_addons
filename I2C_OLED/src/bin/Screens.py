@@ -6,7 +6,7 @@ from xml.dom.expatbuilder import TEXT_NODE
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 from bin.Scroller import Scroller
-from bin.SSD1306 import SSD1306_128_64, SSD1306_128_32
+from bin.SSD1306 import SSD1306_128_64
 from bin.Utils import Utils, HassioUtils
 
 # Screen constants 128 x 64
@@ -53,6 +53,7 @@ class Display:
         show_icons=True,
         compact=False,
         show_hint=False,
+        font=None,
     ):
         self.logger = logging.getLogger("Display")
 
@@ -68,6 +69,7 @@ class Display:
         self.show_icons = show_icons
         self.show_hint = show_hint
         self.hint_right = True
+        self.font = font
 
         if self.show_icons and self.show_hint:
             self.logger.error("show_icons and show_hint both True; turning off hint")
@@ -94,9 +96,6 @@ class Display:
 
 
 class BaseScreen:
-    font_path = Utils.current_dir + "/fonts/PixelOperator.ttf"
-    font_bold_path = Utils.current_dir + "/fonts/DejaVuSans-Bold.ttf"
-    font_icon = Utils.current_dir + "/fonts/lineawesome-webfont.ttf"
     fonts = {}
 
     def __init__(self, duration, display=None, utils=None, config=None):
@@ -113,6 +112,15 @@ class BaseScreen:
         self.font_size = 8
         self.logger = logging.getLogger("Screen")
         self.logger.info("'" + self.__class__.__name__ + "' created")
+
+    def font_path(self):
+        return str(self.utils.current_dir + "/fonts/" + self.display.font + ".ttf")
+
+    def font_bold_path(self):
+        return str(self.utils.current_dir + "/fonts/" + self.display.font + "-Bold.ttf")
+
+    def font_icon(self):
+        return str(self.utils.current_dir + "/fonts/lineawesome-webfont.ttf")
 
     @property
     def name(self):
@@ -220,11 +228,11 @@ class BaseScreen:
         key = "font_{}{}".format(str(size), suffix)
 
         if key not in BaseScreen.fonts:
-            font = BaseScreen.font_path
+            font = self.font_path()
             if is_bold:
-                font = BaseScreen.font_bold_path
+                font = self.font_bold_path()
             elif is_icon:
-                font = BaseScreen.font_icon
+                font = self.font_icon()
 
             font = ImageFont.truetype(font, int(size))
             BaseScreen.fonts[key] = font

@@ -71,6 +71,10 @@ configuration:
     name: Rotar pantalla
     description: >-
       Número de grados para rotar la pantalla en sentido antihorario desde el centro.
+Font:
+    name: Fuente
+    description: >-
+      Fuente a usar para el texto.
 
   Welcome_Screen_Duration:
     name: Duración de la pantalla de bienvenida

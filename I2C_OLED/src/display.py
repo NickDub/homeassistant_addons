@@ -55,7 +55,7 @@ def set_logging_level(level):
         log = logging.getLogger(name)
         if level: log.setLevel(level)
 
-    return main;
+    return main
 
 if __name__ == "__main__":
     args = sys.argv[1:]
